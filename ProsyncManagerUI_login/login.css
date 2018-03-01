@@ -1,0 +1,125 @@
+/* 아이콘 기본 */
+top-icon.icon-administrator_02.basic .top-icon-root{
+    color: #448bbc;
+}
+
+/* E-mail 창 기본*/
+top-linearlayout.basic .top-linearlayout-root{
+    border-color: white white black white;
+}
+
+/* 1 E-mail, Password 기본(입력전) */
+top-textfield.basic .top-textfield-root{
+    font-family: 'Noto Sans CJK';
+    font-size: 16px;
+    font-weight: 400;
+    color: #a2a5ae;
+}
+
+/* 1-2 E-mail, Password 입력완료 - Login 버튼 눌렀을 시 활성화 */
+top-textfield.correct .top-textfield-root{
+    color: #303030;
+}
+
+/* 2 E-mail, Password Active */  
+top-textfield.basic:active .top-textfield-root {
+    color: #1c458d;
+}
+
+/* 2-2 E-mail,Password error - password 입력 창 먼저 입력시 */
+top-textfield.error .top-textfield-root{
+    color: #da2727;
+}
+top-icon.error .top-icon-root{
+    color: #da2727;
+}
+top-linearlayout.error .top-linearlayout-root{
+    border-color: white white #da2727 white;
+}
+
+/* 2-3 error-message 감추기 */
+top-textview.hidden-error-message .top-textview-root{
+    visibility: hidden;
+}
+
+/* 2-3 error-message 표시 */
+top-textview.show-error-message .top-textview-root{
+    font-size: 13px;
+    color: red;
+    visibility: visible;
+}
+
+/* 3 Remember ~, forgot ~ */
+top-checkbox.remem .top-checkbox-text {
+    /* unvisited link, visited link */
+    font-family='Noto Sans CJk';
+    font-size: 13px;
+    font-weight: 400;
+    color: #a2a5ae;
+}
+
+top-checkbox.remem:hover .top-checkbox-text {
+    /* mouse over link */
+    color: #1c458d;
+}
+
+top-checkbox.remem:active .top-checkbox-text {
+    /* selected link */
+    color: #303030;
+}
+
+top-button.remem .top-button-root {
+    /* unvisited link, visited link */
+    font-family='Noto Sans CJk';
+    font-size: 13px;
+    font-weight: 400;
+    color: #a2a5ae;
+}
+
+top-button.remem:hover .top-button-root {
+    /* mouse over link */
+    color: #1c458d;
+}
+
+top-button.remem:active .top-button-root {
+    /* selected link */
+    color: #303030;
+}
+
+/* 4 Create ~ */ 
+top-button.create .top-button-root {
+    /* unvisited link, visited link */
+    font-family='Noto Sans CJk';
+    font-size: 13px;
+    font-weight: 400;
+    color: #448bbc;
+}
+
+top-button.create:hover .top-button-root {
+    /* mouse over link */
+    color: #1c458d;
+}
+
+top-button.create:active .top-button-root {
+    /* selected link */
+    color: #303030;
+}
+
+/* 6 Login ~ */ 
+top-button.login .top-button-root {
+    /* unvisited link, visited link */
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #448bbc;
+}
+
+top-button.login:hover .top-button-root {
+    /* mouse over link */
+    background-color: #367eaf;
+}
+
+top-button.login:active .top-button-root {
+    /* selected link */
+    background-color: #2472a1;
+}
