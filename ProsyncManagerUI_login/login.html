@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link id="top.js" rel="import" href="./release/top.html">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script>
+        window.addEventListener('HTMLImportsLoaded', function(e) {
+            Top.App.create({
+                config: {
+                    "name": "TOP.js",
+                    "indexPageId": "login_main",
+                    "version": "1.0.0",
+                    "developer": "Tmax",
+                }
+            });
+        });
+
+    </script>
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+        #deg {
+            transform: rotateZ(10deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <top-page id="login_main">
+
+        <top-linearlayout layout-height="1800px" layout-width="3200px" position="absolute" layout-top="50%" layout-left="50%" border-width="0px" margin="-900px 0px 0px -1600px">
+
+            <top-linearlayout background-color="#448bbc" position="absolute" lay-top="50%" layout-left="0px" margin="655px 0px 0px 0px" border-width="0px" layout-height="400px" layout-width="1600px" layout-height="100%" layout-width="100%" z-index=1>
+
+                <top-imageview src="img/ProSync-Manager_white.png" layout-height="50px" layout-width="400px" layout-top="130px" layout-left="1147.5px" border-width="0px"></top-imageview>
+
+                <top-textview text="Creating a web site or an application," font-family='Noto Sans CJk' text-size="12px" font-weight="400" text-color="#9bdcff" position="absolute" layout-top="180px" layout-left="1147.5px" layout-height="22px" layout-width="400px" margin="45px 0px 0px 0px"></top-textview>
+
+                <top-textview text="people usually have different and sometimes numerous goals." font-family='Noto Sans CJk' text-size="12px" font-weight="400" text-color="#9bdcff" position="absolute" layout-top="202px" layout-left="1147.5px" layout-height="22px" layout-width="400px" margin="45px 0px 0px 0px"></top-textview>
+
+                <top-textview text="Some of them in case of conversion give..." font-family='Noto Sans CJk' text-size="12px" font-weight="400" text-color="#9bdcff" position="absolute" layout-top="224px" layout-left="1147.5px" layout-height="22px" layout-width="400px" margin="45px 0px 0px 0px"></top-textview>
+
+            </top-linearlayout>
+
+            <!-- 배경사선 처리  -->
+            <top-linearlayout id="deg" background-color="white" position="absolute" lay-top="0%" layout-left="50%" margin="-200px 0px 0px -60px" border-width="0px" layout-height="2500px" layout-width="2000px" layout-height="100%" layout-width="100%" z-index=1></top-linearlayout>
+
+            <top-imageview src="img/login_bg.png" layout-height="100%" layout-width="100%" max-height="1800px" max-width="3200px" min-height="1080px" min-width="1920px" border-width="0px"></top-imageview>
+
+        </top-linearlayout>
+
+        <!-- box -->
+        <top-linearlayout background-color="rgba(0,0,0,0)" position="absolute" layout-top="50%" layout-left="50%" margin="-305px 0px 0px -452.5px" border-width="0px" layout-height="610px" layout-width="905px" max-height="610px" max-width="905px" min-height="300px" min-width="400px">
+
+            <top-imageview src="img/tmaxdata.png" layout-top="0%" layout-left="0%" layout-height="30px" margin="0px" position="absolute" border-width="0px"></top-imageview>
+
+            <top-imageview src="img/database.png" layout-top="0%" layout-right="0%" position="absolute" layout-height="227px" layout-width="345px" border-width="0px" z-index=1></top-imageview>
+
+            <!-- E-mail address -->
+            <top-linearlayout class="basic" id="userlinearlayout" layout-height="30px" layout-width="345px" position="absolute" layout-top="278px" layout-right="0px" border-width="2px" z-index=1>
+
+                <top-icon class="icon-administrator_02 basic" id="userIcon" layout-height="18px" layout-width="18px" position="absolute" layout-top="0%" layout-left="0%" z-index=1></top-icon>
+
+                <top-textfield class="basic" id="userName" hint="E-mail address" margin="0px 0px 10px 31px" padding="0px" layout-height="24px" layout-width="314px" position="absolute" layout-top="0%" layout-left="0%" border-width="0px" z-index=1 on-click="onEmailClick"></top-textfield>
+
+            </top-linearlayout>
+
+            <!-- Password -->
+            <top-linearlayout layout-height="32px" layout-width="345px" position="absolute" layout-top="312px" layout-right="0%" border-width="2px" border-color="white white black white" margin="25px 0px 0px 0px" z-index=1>
+
+                <top-icon class="icon-lock" text-color="#448bbc" layout-height="20px" layout-width="20px" position="absolute" layout-top="0%" layout-left="0%" z-index=1></top-icon>
+
+                <top-textfield class="basic" id="userPassword" hint="Password" password="true" margin="0px 0px 10px 31px" padding="0px" layout-height="24px" layout-width="314px" position="absolute" layout-top="0%" layout-left="0%" border-width="0px" z-index=1 on-click="onPasswordClick"></top-textfield>
+
+            </top-linearlayout>
+
+            <!-- Remember me check-box -->
+            <top-linearlayout layout-height="15px" layout-width="345px" position="absolute" layout-top="373px" layout-right="0px" margin="10px 0px 20px 0px" border-width="0px">
+
+                <top-textview class="hidden-error-message" id="error-message" text="Please enter your ID" position="absolute" layout-top="0%" layout-left="0%" layout-height="15px" layout-width="200px" margin="0px" z-index=1></top-textview>
+
+                <top-checkbox class="remem" text="Remember me" position="absolute" layout-top="0%" layout-right="0px" layout-height="100%" z-index=1></top-checkbox>
+
+            </top-linearlayout>
+
+            <!-- button  -->
+            <top-linearlayout layout-height="87px" layout-width="345px" position="absolute" layout-top="406px" layout-right="0px" border-width="0px">
+
+                <top-button class="login" text="Login" margin="0px" padding="0px" layout-height="53px" layout-width="345px" position="absolute" layout-top="0%" layout-left="0%" z-index=1></top-button>
+
+                <top-button class="create" text="Create Account" background-color="white" margin="73px 10px 0px 10px" padding="0px" layout-height="14px" layout-width="90px" position="absolute" layout-top="0%" layout-right="0%" z-index=1></top-button>
+
+                <top-linearlayout layout-height="13px" layout-width="2px" position="absolute" layout-top="0%" layout-right="0%" margin="76px 30% 0px 0px" border-width="1px" border-color="white white white #a2a5ae" z-index=1></top-linearlayout>
+
+                <top-button class="remem" text="Forgot Password" background-color="white" margin="73px 10px 0px 15px" padding="0px" layout-height="14px" layout-width="90px" position="absolute" layout-top="0%" layout-right="120px" z-index=1></top-button>
+
+                <top-linearlayout layout-height="13px" layout-width="2px" position="absolute" layout-top="0%" layout-right="0%" margin="76px 70% 0px 0px" border-width="1px" border-color="white #a2a5ae white white" z-index=1></top-linearlayout>
+
+                <top-button class="remem" text="Find Account" background-color="white" margin="73px 15px 0px 10px" padding="0px" layout-height="14px" layout-width="90px" position="absolute" layout-top="0%" layout-right="240px" z-index=1></top-button>
+
+            </top-linearlayout>
+
+            <!-- Copyright  -->
+            <top-linearlayout layout-height="50px" layout-width="345px" position="absolute" layout-top="100%" layout-left="100%" margin="-50px 0px 0px -345px" border-width="0px">
+
+                <top-textview text="Copyrightⓒ 2018.TmaxData.All Rights Reserved." font-family='Noto Sans CJk' text-size="13px" font-weight="400" text-color="#b4bac8" position="absolute" layout-height="25px" layout-width="345px" align="right" z-index=1></top-textview>
+
+            </top-linearlayout>
+
+        </top-linearlayout>
+
+    </top-page>
+
+    <script>
+        /* E-mail 클릭시 */
+        function onEmailClick(){
+            var uname = Top.Dom.selectById("userName");
+            var uicon = Top.Dom.selectById("userIcon");
+            var ulinear = Top.Dom.selectById("userlinearlayout");
+            var errorm = Top.Dom.selectById("error-message");
+            
+            /* E-mail 관련 error class를 빼고 error-message 감추기 */
+            if(uname.hasClass("error")){
+                    uname.removeClass("error");
+                    uname.setText("");
+                
+                    uicon.removeClass("error");
+                    uicon.addClass("basic");
+                
+                    ulinear.removeClass("error");
+            }
+            if(errorm.hasClass("show-error-message")){
+                    errorm.removeClass("show-error-message");
+            }
+        }
+        
+        /* password 클릭시 */
+        function onPasswordClick(){
+            var uname = Top.Dom.selectById("userName");
+            var uicon = Top.Dom.selectById("userIcon");
+            var ulinear = Top.Dom.selectById("userlinearlayout");
+            var errorm = Top.Dom.selectById("error-message");
+            
+            /* password 먼저 입력시 */
+            if((uname.getText() == "" || uname.getText() == undefined)){
+                /* E-mail 관련 error class를 덧붙이고 error-message 표시 */
+                if(!uname.hasClass("error")){
+                    uname.addClass("error");
+                    uname.setText("tmaxlogin@gmail.com              X");
+                    
+                    uicon.removeClass("basic");
+                    uicon.addClass("error");
+                    
+                    ulinear.addClass("error");
+                }
+                if(!errorm.hasClass("show-error-message")){
+                    errorm.addClass("show-error-message");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
